@@ -1,4 +1,5 @@
 from turtle import *
+from blocks import Obstacle
 scr = Screen()
 scr.setup(width = 500, height = 1000)
 scr.bgcolor("white")
