@@ -12,6 +12,12 @@ player.ht()
 player.goto(0, -300)
 player.st()
 
+
+#ObstacleCode
+obst = [Obstacle("square"), Obstacle("square")]
+
+
+
 #This is the gameboard
 game_left = Turtle()
 game_left.ht()
