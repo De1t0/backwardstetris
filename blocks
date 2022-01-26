@@ -1,7 +1,9 @@
 from turtle import *
+import random
 class Obstacle:
 
   def __init__(self):
     self.trt = Turtle()
+    trt.shape("square")
 
     
