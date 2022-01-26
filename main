@@ -14,7 +14,7 @@ player.st()
 
 
 #ObstacleCode
-obst = [Obstacle("square"), Obstacle("square")]
+obst = Obstacle("square")
 
 
 
