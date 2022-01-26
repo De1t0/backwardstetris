@@ -46,15 +46,12 @@ def move_player_left():
     x_pos = player.xcor()
     x_pos -= 10
     player.goto(x_pos, player.ycor())
-    if -190 < player.xcor() < -200:
-        player.goto(-150, player.ycor())
 def move_player_right():
     if 80 < player.xcor():
         return
     x_pos = player.xcor()
     x_pos += 10
     player.goto(x_pos, player.ycor())
-print("Hi Matt")
 
 
 
