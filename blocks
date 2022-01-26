@@ -4,7 +4,7 @@ class Obstacle:
 
   def __init__(self, shp):
     self.trt = Turtle()
-    trt.shape(shp)
-    trt.shearfactor(randint(0,3))
+    self.trt.shape(shp)
+    self.trt.shearfactor(0.5)
 
     
