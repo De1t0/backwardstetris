@@ -54,7 +54,7 @@ def move_player_right():
     x_pos = player.xcor()
     x_pos += 10
     player.goto(x_pos, player.ycor())
-
+print("Hi Matt")
 
 
 
