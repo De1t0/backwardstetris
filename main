@@ -1,0 +1,69 @@
+from turtle import *
+scr = Screen()
+scr.setup(width = 500, height = 1000)
+scr.bgcolor("white")
+scr.title("Game")
+player = Turtle()
+player.color("Orange")
+player.pen(pendown= False)
+player.shape("square")
+player.ht()
+player.goto(0, -300)
+player.st()
+
+#This is the gameboard
+game_left = Turtle()
+game_left.ht()
+game_left.pen(pendown= False)
+game_left.shape("square")
+game_left.shapesize(stretch_wid=400, stretch_len=10)
+game_left.setposition(-200,0)
+game_left.st()
+
+
+game_right = Turtle()
+game_right.ht()
+game_right.pen(pendown= False)
+game_right.shape("square")
+game_right.shapesize(stretch_wid=400, stretch_len=10)
+game_right.setposition(200,0)
+game_right.st()
+
+
+
+#moves player in the direction of their choice
+def move_player_up():
+    y_pos = player.ycor()
+    y_pos += 10
+    player.goto(player.xcor(), y_pos)
+def move_player_down():
+    y_pos = player.ycor()
+    y_pos -= 10
+    player.goto(player.xcor(), y_pos)
+def move_player_left():
+    if player.xcor() < -80:
+        return
+    x_pos = player.xcor()
+    x_pos -= 10
+    player.goto(x_pos, player.ycor())
+    if -190 < player.xcor() < -200:
+        player.goto(-150, player.ycor())
+def move_player_right():
+    if 80 < player.xcor():
+        return
+    x_pos = player.xcor()
+    x_pos += 10
+    player.goto(x_pos, player.ycor())
+
+
+
+
+
+scr.onkey(move_player_up, "w")
+scr.onkey(move_player_left, "a")
+scr.onkey(move_player_right, "d")
+scr.onkey(move_player_down, "s")
+
+scr.listen()
+while True:
+    scr.update()
